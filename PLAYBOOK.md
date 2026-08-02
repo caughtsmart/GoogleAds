@@ -55,9 +55,12 @@ Standing watch items for the daily run:
   spend drops while brand-term revenue holds; flag if revenue falls too.
 - **GS | PMAX New at £94.80/day (+20% on 2 Aug):** confirm ROAS holds ≥5
   at the higher budget before recommending further increases.
-- **Demand Gen "YouTube channel subscriptions"** is a primary conversion
-  pending a manual UI fix (set to Secondary; it sits under the Engagement
-  goal group). Until fixed, exclude Demand Gen from conversion totals.
+- **YouTube conversion actions set to Secondary by Graham on 2 Aug**
+  ("channel subscriptions" + "follow-on views"). The API still showed
+  primary_for_goal=True immediately after — verify the flip has propagated
+  (both False, and Demand Gen conversions dropping to ~0 for new days).
+  If still primary after 3 Aug, tell Graham the UI change didn't stick.
+  Until confirmed, exclude Demand Gen from conversion totals.
 - **Conversion hygiene verified 2 Aug:** all live campaigns' Conversions
   come solely from "Google Shopping App Purchase" (primary; Shopify
   server-side) — correct, no double counting; GA4 purchase is secondary.
