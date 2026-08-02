@@ -56,8 +56,14 @@ Standing watch items for the daily run:
 - **GS | PMAX New at £94.80/day (+20% on 2 Aug):** confirm ROAS holds ≥5
   at the higher budget before recommending further increases.
 - **Demand Gen "YouTube channel subscriptions"** is a primary conversion
-  pending a manual UI fix (set to Secondary). Until fixed, exclude Demand
-  Gen from all conversion/revenue totals.
+  pending a manual UI fix (set to Secondary; it sits under the Engagement
+  goal group). Until fixed, exclude Demand Gen from conversion totals.
+- **Conversion hygiene verified 2 Aug:** all live campaigns' Conversions
+  come solely from "Google Shopping App Purchase" (primary; Shopify
+  server-side) — correct, no double counting; GA4 purchase is secondary.
+  Outstanding UI cleanup: "Loaded Dice - GA4 (web) purchase_enhanced" is
+  misconfigured (4,254 "purchases" @ £1 in 30d, secondary) — fix or remove;
+  remind daily until resolved, but it does not affect bidding.
 - **Paused on 2 Aug:** Warhammer Search (21071347135), WH40K 11th Ed
   Launch (24049932610). Leave paused; ignore their residual data.
 
