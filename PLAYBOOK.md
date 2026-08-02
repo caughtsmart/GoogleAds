@@ -41,10 +41,25 @@ For each live, non-Glopal campaign:
 
 ## Adjustment policy
 
-**Current mode: RECOMMEND-ONLY.** The daily run makes no changes to the
-account. Every recommendation is listed in the report with the exact
-Windsor.ai action that would implement it, so Graham can say "do rec 2"
-in any session.
+**Current mode: RECOMMEND-ONLY** (confirmed by Graham 2026-08-02: no
+auto-apply until a few manual run-throughs have built confidence). The
+daily run makes no changes to the account. Every recommendation is listed
+in the report with the exact Windsor.ai action that would implement it,
+so Graham can say "do rec 2" in any session.
+
+Standing watch items for the daily run:
+
+- **Brand Search transition (from 2 Aug):** campaign-level phrase negatives
+  "warhammer" / "wayland games" / "dawn of palpagos" were added on
+  2026-08-02, which should cut its generic spend (~£30/day) sharply. Verify
+  spend drops while brand-term revenue holds; flag if revenue falls too.
+- **GS | PMAX New at £94.80/day (+20% on 2 Aug):** confirm ROAS holds ≥5
+  at the higher budget before recommending further increases.
+- **Demand Gen "YouTube channel subscriptions"** is a primary conversion
+  pending a manual UI fix (set to Secondary). Until fixed, exclude Demand
+  Gen from all conversion/revenue totals.
+- **Paused on 2 Aug:** Warhammer Search (21071347135), WH40K 11th Ed
+  Launch (24049932610). Leave paused; ignore their residual data.
 
 Pre-agreed guardrails for when auto-apply is enabled (not yet):
 
