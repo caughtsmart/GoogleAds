@@ -49,6 +49,21 @@ so Graham can say "do rec 2" in any session.
 
 Standing watch items for the daily run:
 
+- **VERIFY FIRST (from 4 Aug): Brand Search "warhammer" negative.** Pushed
+  2 Aug (silently lost) and re-pushed 4 Aug with "near me" + "goblin
+  gaming". Read back campaign criteria for campaign 23986650954. If
+  "warhammer" is still absent on 5 Aug, DO NOT push it a third time —
+  something is stripping it (likely conflict with the campaign's generic
+  warhammer positive keywords). Recommend to Graham removing/pausing those
+  generic positive keywords instead (remove_keywords via
+  keyword_criterion_id), making it a pure brand campaign.
+- **Demand Gen budget £20/day from 4 Aug** (Graham's instruction). Monitor
+  delivery with no conversion signal; it reports 0 conversions now —
+  judge it on engagement cost only, revisit keep/kill with Graham later.
+- **3 Aug data was immature at first reporting** (ROAS 0.91 provisional).
+  Re-check matured 3 Aug figures; if account ROAS for 3 Aug is still < 2
+  once matured, investigate PMAX day performance.
+
 - **Brand Search transition (from 2 Aug):** campaign-level phrase negatives
   "warhammer" / "wayland games" / "dawn of palpagos" were added on
   2026-08-02, which should cut its generic spend (~£30/day) sharply. Verify
