@@ -55,11 +55,15 @@ Standing watch items for the daily run:
   with the removed warhammer positives; moot now, but verify the 4 Aug
   negatives ("warhammer", "near me", "goblin gaming") appear in criterion
   readback, as they protect the broad brand keyword from wandering.
-  Monitor daily: spend should settle well under ~£20/day (genuine brand
-  demand ≈ £14/day historically). If it keeps spending £40+, flag —
-  broad "loaded dice" is matching junk again (it's also a generic term
-  for trick dice); recommend new negatives and/or PHRASE+EXACT brand
-  keywords alongside the broad one, and consider a budget cut to £20/day.
+  Full new config set by Graham on 4 Aug: single "Loaded Dice" BROAD
+  keyword, budget £20/day, bidding switched to Maximise Clicks with a
+  ~£0.30 CPC ceiling. Verify in data: bidding_strategy_type should read
+  TARGET_SPEND. Monitor daily: spend should settle around £14/day
+  historical brand demand, avg CPC ≤ £0.30, and impression share should
+  RISE (was floored <10% while diluted with generic keywords). Flag if:
+  spend pegs at the £20 cap with junk search terms (recommend more
+  negatives), or impression share falls while CPC sits at the ceiling
+  (competitor bidding on the brand — recommend nudging the ceiling up).
 - **No generic Warhammer search campaign** — decided with Graham 4 Aug.
   Three attempts all failed (Warhammer Search £120/0 conv; WH40K Launch
   ROAS 0.55; warhammer keywords in Brand Search ~1.2 ROAS) while PMAX
