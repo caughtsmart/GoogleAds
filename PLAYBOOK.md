@@ -49,14 +49,24 @@ so Graham can say "do rec 2" in any session.
 
 Standing watch items for the daily run:
 
-- **VERIFY FIRST (from 4 Aug): Brand Search "warhammer" negative.** Pushed
-  2 Aug (silently lost) and re-pushed 4 Aug with "near me" + "goblin
-  gaming". Read back campaign criteria for campaign 23986650954. If
-  "warhammer" is still absent on 5 Aug, DO NOT push it a third time —
-  something is stripping it (likely conflict with the campaign's generic
-  warhammer positive keywords). Recommend to Graham removing/pausing those
-  generic positive keywords instead (remove_keywords via
-  keyword_criterion_id), making it a pure brand campaign.
+- **Brand Search restructured by Graham on 4 Aug:** all keywords removed
+  except "Loaded Dice" on BROAD match — it is now a pure brand campaign.
+  The earlier "warhammer"-negative failures were almost certainly conflicts
+  with the removed warhammer positives; moot now, but verify the 4 Aug
+  negatives ("warhammer", "near me", "goblin gaming") appear in criterion
+  readback, as they protect the broad brand keyword from wandering.
+  Monitor daily: spend should settle well under ~£20/day (genuine brand
+  demand ≈ £14/day historically). If it keeps spending £40+, flag —
+  broad "loaded dice" is matching junk again (it's also a generic term
+  for trick dice); recommend new negatives and/or PHRASE+EXACT brand
+  keywords alongside the broad one, and consider a budget cut to £20/day.
+- **No generic Warhammer search campaign** — decided with Graham 4 Aug.
+  Three attempts all failed (Warhammer Search £120/0 conv; WH40K Launch
+  ROAS 0.55; warhammer keywords in Brand Search ~1.2 ROAS) while PMAX
+  serves the same demand at 7+ ROAS with only ~20% impression share.
+  Warhammer growth lever = scale PMAX while ROAS holds. Exception worth
+  proposing around major releases: narrow exact-match campaigns on
+  specific high-intent release terms with a tROAS, judged after 2 weeks.
 - **Demand Gen budget £20/day from 4 Aug** (Graham's instruction). Monitor
   delivery with no conversion signal; it reports 0 conversions now —
   judge it on engagement cost only, revisit keep/kill with Graham later.
