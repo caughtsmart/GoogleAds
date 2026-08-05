@@ -35,9 +35,11 @@ For each live, non-Glopal campaign:
 - **Scale opportunities.** ROAS ≥ 5 and search impression share < 40% →
   candidate for budget increase.
 - **Conversion hygiene.** Watch for campaigns whose "conversions" are
-  £1-value micro-conversions (e.g. Demand Gen Brand Awareness counts
-  page-engagement-style actions at £1 each). Never treat these as revenue;
-  report such campaigns on engagement cost, not ROAS.
+  £1-value micro-conversions. Never treat these as revenue; report such
+  campaigns on engagement cost, not ROAS.
+- **Awareness campaigns are exempt.** Campaigns Graham has designated as
+  awareness plays (currently Demand Gen Brand Awareness) are excluded from
+  every conversion-based check above — see the standing watch items.
 
 ## Adjustment policy
 
@@ -63,9 +65,18 @@ Standing watch items for the daily run:
   Warhammer growth lever = scale PMAX while ROAS holds. Exception worth
   proposing around major releases: narrow exact-match campaigns on
   specific high-intent release terms with a tROAS, judged after 2 weeks.
-- **Demand Gen budget £20/day from 4 Aug** (Graham's instruction). Monitor
-  delivery with no conversion signal; it reports 0 conversions now —
-  judge it on engagement cost only, revisit keep/kill with Graham later.
+- **Demand Gen Brand Awareness — SETTLED POLICY (Graham, 5 Aug).** This
+  campaign is deliberately an awareness play at £20/day. Zero or very few
+  conversions is the EXPECTED and ACCEPTED outcome, not a problem.
+  Therefore:
+  - Do NOT flag it under the zero-converter rule, the ROAS floor, or any
+    conversion-based rule. It is exempt from all of them.
+  - Do NOT recommend pausing it, cutting it, or "fixing" its conversions.
+  - EXCLUDE it from account-level ROAS and revenue totals; report its
+    spend separately as awareness cost.
+  - Judge it only on awareness efficiency: spend vs budget, impressions,
+    reach, CPC/CPM trend. Flag ONLY if spend exceeds the £20/day budget,
+    or CPC/CPM rises sharply (i.e. awareness getting expensive).
 - **Conversion lag is large — quantified 5 Aug.** Shopping App purchases
   mature +18% to +127% over the 48h after a day closes (3 Aug went ROAS
   0.91 → 2.00; 2 Aug settled at 4.76). NEVER judge a day less than 3 days
