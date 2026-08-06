@@ -77,22 +77,33 @@ Standing watch items for the daily run:
   - Judge it only on awareness efficiency: spend vs budget, impressions,
     reach, CPC/CPM trend. Flag ONLY if spend exceeds the £20/day budget,
     or CPC/CPM rises sharply (i.e. awareness getting expensive).
-- **Conversion lag is large — quantified 5 Aug.** Shopping App purchases
-  mature +18% to +127% over the 48h after a day closes (3 Aug went ROAS
-  0.91 → 2.00; 2 Aug settled at 4.76). NEVER judge a day less than 3 days
-  old. Always label recent-day ROAS "provisional" and quote the most
-  recent MATURED day as the real headline.
-- **PMAX budget decision due Friday 7 Aug.** Held at £94.80/day on 5 Aug
-  despite qualifying for a scale-up (ROAS 6.96, IS 22%), because 30d ROAS
-  drifted 7.39 → 6.96 post-increase and 7d ROAS sits at 62% of 30d (just
-  over the 60% flag line), both partly immature-data artefacts. On Friday,
-  re-check with matured data: if 30d ROAS ≥ 6 and 7d ≥ 70% of 30d,
-  recommend +20% (to ~£114/day); if 7d ROAS < 60% of 30d, recommend
-  reverting to £79/day.
-- **EUGY 3D Puzzles watch (from 5 Aug):** 7d ROAS 2.47 vs 30d 3.16, CPC
-  spiked to £0.76 on 4 Aug from ~£0.35. No action while above the 2.0
-  floor. If CPC stays elevated AND 7d ROAS < 2.5 on Friday, recommend a
-  CPC ceiling or budget trim.
+  - **Flagged 6 Aug: CPM tripled** (£2.31 → £6.81) because the campaign
+    still uses MAXIMIZE_CONVERSIONS bidding with zero conversions by
+    design — no signal to optimise toward. Recommended switching to
+    Maximise Clicks, budget unchanged. Awaiting Graham. Track CPM daily;
+    baseline to restore is ~£2.50-3.50.
+- **Conversion lag is large — revised 6 Aug: maturation takes 3 FULL
+  DAYS.** 3 Aug PMAX revenue went £152 (day+1) → £345 (day+2) → £608
+  (day+3). 2 Aug settled at day+3 and held. NEVER judge a day less than
+  3 days old. The headline metric each morning must be the **matured
+  window (days 3+ old)**; label anything newer "provisional" and do not
+  draw conclusions from it. A drop in recent-day ROAS is lag until
+  proven otherwise — do not raise it as a concern without checking the
+  same day again once matured.
+- **PMAX budget: scale-up recommended 6 Aug, awaiting Graham.** Both
+  thresholds met on matured data (30d ROAS 6.57 ≥ 6; matured 5d ROAS 5.37
+  = 82% of 30d ≥ 70%; IS 22%). Recommended +20% to ~£114/day; it already
+  spends at that level under Google's 2× daily allowance. If approved,
+  re-check matured ROAS 4 days later before any further increase.
+- **Brand Search: BROAD match drift flagged 6 Aug.** Negatives work, but
+  broad "loaded dice" now matches the generic dice/DnD/Kill Team market
+  (62% of yesterday's spend). Recommended switching the keyword to PHRASE
+  match — keeps all brand queries, kills the category drift, avoids
+  negative-keyword whack-a-mole. If Graham declines the match-type change,
+  fall back to recommending category negatives ("dice tray", "dnd dice",
+  "kill team"). Awaiting decision.
+- **EUGY watch CLOSED 6 Aug** — the £0.76 CPC spike was a one-day blip on
+  16 clicks; CPC back to £0.44, matured ROAS 2.85. Routine monitoring.
 
 - **Brand Search transition (from 2 Aug):** campaign-level phrase negatives
   "warhammer" / "wayland games" / "dawn of palpagos" were added on
