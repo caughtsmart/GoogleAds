@@ -98,14 +98,25 @@ Standing watch items for the daily run:
     protect PMAX/Search value bidding, but YouTube conversions land almost
     entirely on Demand Gen (582 vs 23 on PMAX over 30 days, against PMAX's
     293 purchases). Negligible protection gained, whole objective lost.
-  - **Recommended 7 Aug: revert both YouTube actions to PRIMARY** (UI
-    only — not a Windsor action). Demand Gen is excluded from reporting
-    totals anyway, so the account-level noise costs nothing. Awaiting
-    Graham. If he declines, recommend pausing the campaign instead —
-    paying £12-20/day for zero output is the worst of the options.
-  - **Verify after any change:** YouTube channel subscriptions in
-    `all_conversions` should return to double/triple digits per day and
-    CPM should fall back toward ~£2.50-3.50.
+  - **FIXED by Graham 7 Aug.** Under Goals → Engagements → Goal settings:
+    Account default = Off, campaign-specific optimisation = Demand Gen
+    only, and "YouTube channel subscriptions" (YouTube hosted) set to
+    **Primary**. This is the ideal configuration — Demand Gen gets its
+    bidding signal back and PMAX/Search/EUGY are untouched.
+  - **VERIFY from 8 Aug:** YouTube channel subscriptions should reappear
+    in `all_conversions` (expect double/triple digits per day; was 141-201
+    before it broke) and CPM should fall from ~£8 toward ~£2.50-3.50.
+    Allow a 3-5 day re-learning period after the goal change — do not
+    judge or recommend changes to this campaign before ~11 Aug. If
+    subscriptions have NOT resumed by 10 Aug, the cause is not the
+    conversion goal: investigate whether YouTube video assets are
+    serving/approved (delivery may have shifted to Discover/Gmail).
+  - **Reading trap (cost a day, 7 Aug):** the "All your goals" summary row
+    shows a COUNT of primary actions per goal, not which ones. Engagement
+    showed "1 primary" — that was "Local actions - Other engagements",
+    while YouTube channel subscriptions sat secondary beneath it. Never
+    conclude an action's status from the goals summary; open Goal settings
+    → Conversion action optimisation to see per-action status.
   - **General lesson: check `all_conversions`, not `conversions`, when
     judging whether a change broke a campaign's actual output.** The
     `conversions` field hides everything marked secondary.
