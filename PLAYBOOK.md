@@ -82,26 +82,32 @@ Standing watch items for the daily run:
     design — no signal to optimise toward. Recommended switching to
     Maximise Clicks, budget unchanged. Awaiting Graham. Track CPM daily;
     baseline to restore is ~£2.50-3.50.
-- **Conversion lag is large — revised 6 Aug: maturation takes 3 FULL
-  DAYS.** 3 Aug PMAX revenue went £152 (day+1) → £345 (day+2) → £608
-  (day+3). 2 Aug settled at day+3 and held. NEVER judge a day less than
-  3 days old. The headline metric each morning must be the **matured
-  window (days 3+ old)**; label anything newer "provisional" and do not
-  draw conclusions from it. A drop in recent-day ROAS is lag until
-  proven otherwise — do not raise it as a concern without checking the
-  same day again once matured.
-- **PMAX budget: scale-up recommended 6 Aug, awaiting Graham.** Both
-  thresholds met on matured data (30d ROAS 6.57 ≥ 6; matured 5d ROAS 5.37
-  = 82% of 30d ≥ 70%; IS 22%). Recommended +20% to ~£114/day; it already
-  spends at that level under Google's 2× daily allowance. If approved,
-  re-check matured ROAS 4 days later before any further increase.
-- **Brand Search: BROAD match drift flagged 6 Aug.** Negatives work, but
-  broad "loaded dice" now matches the generic dice/DnD/Kill Team market
-  (62% of yesterday's spend). Recommended switching the keyword to PHRASE
-  match — keeps all brand queries, kills the category drift, avoids
-  negative-keyword whack-a-mole. If Graham declines the match-type change,
-  fall back to recommending category negatives ("dice tray", "dnd dice",
-  "kill team"). Awaiting decision.
+- **Conversion lag — revised again 7 Aug: day+3 indicative, day+5
+  final.** 3 Aug went £152 (d+1) → £345 (d+2) → £608 (d+3, then flat).
+  2 Aug went £447 → £476 → £527 (d+3) → £578 (d+4) — i.e. still moving
+  after day+3. Rule: never judge a day under 3 days old at all; treat
+  day+3/+4 as indicative only; treat day+5 as final. The headline metric
+  each morning is the **matured window (days 3+ old)**, labelled as
+  indicative at its recent edge.
+- **Do not recommend a budget change off a window that excludes the most
+  recent test of the last change** (learned 7 Aug: recommended a PMAX
+  scale-up on 6 Aug from a window ending 3 Aug, then had to withdraw it
+  when 4 Aug — the only day that actually spent the raised budget —
+  matured at 2.06 ROAS). Before any scale recommendation, explicitly
+  check the highest-spend days since the previous change.
+- **PMAX scale-up WITHDRAWN 7 Aug — decision deferred to Mon 10 Aug.**
+  The 6 Aug +20% recommendation was retracted when 4 Aug matured at 2.06
+  ROAS on £111.95 spend (the only day that truly spent the raised budget;
+  every other post-increase day landed at £84-91). Hold £94.80/day. On
+  10 Aug, assess 5/6/7 Aug once matured: if those three average > 4.5
+  ROAS, the scale-up case is real; if they mirror 4 Aug, recommend
+  reverting to £79/day. Do not re-recommend an increase before then.
+- **Brand Search PHRASE match — recommended 6 Aug, softened 7 Aug.**
+  Generic drift was 62% of spend on 5 Aug but only 24% on 6 Aug, so broad
+  match appears to be settling; spend is £17.90 against a £20 budget.
+  Still a valid tightening (saves ~£4-5/day) but no longer urgent — offer
+  it as a judgement call, don't push. Track the generic-share % daily; if
+  it exceeds 50% for two consecutive days, escalate the recommendation.
 - **EUGY watch CLOSED 6 Aug** — the £0.76 CPC spike was a one-day blip on
   16 clicks; CPC back to £0.44, matured ROAS 2.85. Routine monitoring.
 
