@@ -77,11 +77,22 @@ Standing watch items for the daily run:
   - Judge it only on awareness efficiency: spend vs budget, impressions,
     reach, CPC/CPM trend. Flag ONLY if spend exceeds the £20/day budget,
     or CPC/CPM rises sharply (i.e. awareness getting expensive).
-  - **Flagged 6 Aug: CPM tripled** (£2.31 → £6.81) because the campaign
+  - **Flagged 6 Aug: CPM tripled** (£2.31 → £8.41) because the campaign
     still uses MAXIMIZE_CONVERSIONS bidding with zero conversions by
-    design — no signal to optimise toward. Recommended switching to
-    Maximise Clicks, budget unchanged. Awaiting Graham. Track CPM daily;
-    baseline to restore is ~£2.50-3.50.
+    design — no signal to optimise toward. Track CPM daily; baseline to
+    restore is ~£2.50-3.50.
+  - **7 Aug: Maximise Clicks is NOT available for this campaign.** Graham
+    approved the switch; Google rejected both `maximize_clicks` and
+    `target_spend` with "operation is not allowed for the given context"
+    (Demand Gen campaigns don't accept it via API). DO NOT retry this —
+    it will fail again.
+  - **Correct fix is campaign-specific conversion goals, UI only:**
+    set the YouTube engagement actions as primary FOR THIS CAMPAIGN ONLY
+    (Campaign → Settings → Goals → campaign-specific conversion goals).
+    Restores Demand Gen's bidding signal without polluting PMAX/Search
+    value bidding. No Windsor action exists for this. Remind Graham while
+    CPM stays above ~£5, but do not nag — cost of inaction is low since
+    spend self-limits at £12-20/day.
 - **Conversion lag — revised again 7 Aug: day+3 indicative, day+5
   final.** 3 Aug went £152 (d+1) → £345 (d+2) → £608 (d+3, then flat).
   2 Aug went £447 → £476 → £527 (d+3) → £578 (d+4) — i.e. still moving
