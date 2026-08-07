@@ -86,13 +86,29 @@ Standing watch items for the daily run:
     `target_spend` with "operation is not allowed for the given context"
     (Demand Gen campaigns don't accept it via API). DO NOT retry this —
     it will fail again.
-  - **Correct fix is campaign-specific conversion goals, UI only:**
-    set the YouTube engagement actions as primary FOR THIS CAMPAIGN ONLY
-    (Campaign → Settings → Goals → campaign-specific conversion goals).
-    Restores Demand Gen's bidding signal without polluting PMAX/Search
-    value bidding. No Windsor action exists for this. Remind Graham while
-    CPM stays above ~£5, but do not nag — cost of inaction is low since
-    spend self-limits at £12-20/day.
+  - **7 Aug — ROOT CAUSE FOUND, and it is worse than a CPM problem.**
+    Campaign-specific goals were ALREADY set ("YouTube engagements", both
+    actions ticked), so that was never the fix. Checking `all_conversions`
+    (counts output regardless of primary/secondary) shows YouTube channel
+    subscriptions went 141-201/day up to 2 Aug, then **0 every day from
+    3 Aug** — the day after the actions were set account-level Secondary.
+    £67.98 spent since for zero subscriptions. Campaign-level ticks govern
+    reporting; the account-level Secondary flag governs bidding.
+  - **The 2 Aug Secondary change was a bad trade** — it was meant to
+    protect PMAX/Search value bidding, but YouTube conversions land almost
+    entirely on Demand Gen (582 vs 23 on PMAX over 30 days, against PMAX's
+    293 purchases). Negligible protection gained, whole objective lost.
+  - **Recommended 7 Aug: revert both YouTube actions to PRIMARY** (UI
+    only — not a Windsor action). Demand Gen is excluded from reporting
+    totals anyway, so the account-level noise costs nothing. Awaiting
+    Graham. If he declines, recommend pausing the campaign instead —
+    paying £12-20/day for zero output is the worst of the options.
+  - **Verify after any change:** YouTube channel subscriptions in
+    `all_conversions` should return to double/triple digits per day and
+    CPM should fall back toward ~£2.50-3.50.
+  - **General lesson: check `all_conversions`, not `conversions`, when
+    judging whether a change broke a campaign's actual output.** The
+    `conversions` field hides everything marked secondary.
 - **Conversion lag — revised again 7 Aug: day+3 indicative, day+5
   final.** 3 Aug went £152 (d+1) → £345 (d+2) → £608 (d+3, then flat).
   2 Aug went £447 → £476 → £527 (d+3) → £578 (d+4) — i.e. still moving
