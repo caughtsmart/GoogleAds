@@ -66,6 +66,23 @@ Standing watch items for the daily run:
     tracked-share %. Recovery = tracked share back to ~30-40%.
   - Watch for retrospective backfill — if the tag is fixed, historic days
     may repopulate, so re-check 4-7 Aug before writing them off.
+  - **Not a single broken tag** (established 8 Aug): the GA4 purchase
+    action, which the UI reports as Active, shows the SAME collapse as
+    the flagged Shopping App action. Do NOT promote GA4 purchase to
+    Primary as a workaround — it would not restore signal and would risk
+    double counting.
+  - **Second anomaly, same date:** Shopify sessions tripled on 4 Aug
+    (1,346 → 4,097) while conversion rate fell from ~1.8% to 0.63%. The
+    surge is UK/US/Singapore, NOT Glopal's DE/NL/FR markets — profile
+    suggests bot or scraper traffic. Meanwhile GA4 sessions HALVED on the
+    same day (9,745 → 4,280), i.e. the two analytics systems moved in
+    opposite directions, so measurement itself changed on 4 Aug.
+  - **Daily monitoring set:** Google `all_conversions` for both purchase
+    actions; Shopify orders/total_sales; Shopify sessions + conversion
+    rate; GA4 sessions. Report all four — the divergence between them is
+    the diagnostic.
+  - Blocked pending Graham identifying what changed on 4 Aug (theme, app,
+    consent banner, bot protection, Glopal integration).
 - **ALWAYS sanity-check Google-reported revenue against Shopify before
   concluding a campaign is underperforming.** Learned 8 Aug: two days of
   recommendations (a PMAX scale-up, then its withdrawal on
