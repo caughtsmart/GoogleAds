@@ -51,47 +51,40 @@ so Graham can say "do rec 2" in any session.
 
 Standing watch items for the daily run:
 
-- **🚨 OPEN INCIDENT (from 8 Aug): purchase conversion tracking broken.**
-  Google-tracked purchase revenue fell from ~40% of Shopify sales (2-3
-  Aug) to 2-6% (5-7 Aug) while the shop traded normally and ad clicks
-  held steady. Suspected cause: the "Google Shopping App Purchase" action
-  (the account's only primary purchase conversion, fed by the Shopify
-  Google & YouTube app) has stopped recording. The Ads UI shows the
-  **Purchase goal as "Needs attention"**. Until resolved:
-  - **Make NO budget or bidding recommendations based on ROAS.** State
-    plainly in each report that ROAS is unreliable.
-  - Each morning, re-run the cross-check: Google Ads `all_conversions`
-    for "Google Shopping App Purchase" by day vs Shopify
-    `FROM sales SHOW orders, total_sales TIMESERIES day`. Report the
-    tracked-share %. Recovery = tracked share back to ~30-40%.
-  - Watch for retrospective backfill — if the tag is fixed, historic days
-    may repopulate, so re-check 4-7 Aug before writing them off.
-  - **Not a single broken tag** (established 8 Aug): the GA4 purchase
-    action, which the UI reports as Active, shows the SAME collapse as
-    the flagged Shopping App action. Do NOT promote GA4 purchase to
-    Primary as a workaround — it would not restore signal and would risk
-    double counting.
-  - **Second anomaly, same date:** Shopify sessions tripled on 4 Aug
-    (1,346 → 4,097) while conversion rate fell from ~1.8% to 0.63%. The
-    surge is UK/US/Singapore, NOT Glopal's DE/NL/FR markets — profile
-    suggests bot or scraper traffic. Meanwhile GA4 sessions HALVED on the
-    same day (9,745 → 4,280), i.e. the two analytics systems moved in
-    opposite directions, so measurement itself changed on 4 Aug.
-  - **Daily monitoring set:** Google `all_conversions` for both purchase
-    actions; Shopify orders/total_sales; Shopify sessions + conversion
-    rate; GA4 sessions. Report all four — the divergence between them is
-    the diagnostic.
-  - Blocked pending Graham identifying what changed on 4 Aug (theme, app,
-    consent banner, bot protection, Glopal integration).
+- **Under-tracking: KNOWN AND ACCEPTED (Graham's call, 8 Aug). Do not
+  re-investigate; do not raise it as an alarm.** From 4 Aug, Google
+  tracked only 2-13% of Shopify revenue (was ~40%), across BOTH purchase
+  actions, alongside a bot-traffic surge and a GA4/Shopify session
+  divergence. Too much changed on the site to isolate a cause, and the
+  bot traffic is expected to subside as TCG lines are wound down. Mention
+  it in one line per report, not as a banner.
+- **DECISION BASIS while tracked ROAS is unreliable.** Absolute ROAS is
+  meaningless right now — the shop is trading normally (42-75 orders/day)
+  so the shortfall is measurement, not performance. Use instead:
+  1. **Shopify total sales** (`FROM sales SHOW orders, total_sales
+     TIMESERIES day`) as the truth source for whether trading is healthy.
+  2. **Relative comparison between campaigns** — under-tracking hits all
+     campaigns roughly equally, so campaign-vs-campaign ROAS ranking and
+     week-on-week direction remain valid even though the absolute level
+     does not.
+  3. **Non-revenue campaign health**: spend vs budget, CPC, impression
+     share, search-term quality, click volume.
+  Report the **tracked share %** each day as one context line. If it
+  returns to ~30-40% for 3 consecutive days, say so and re-open the
+  frozen budget decisions.
+- **Never present an absolute ROAS figure without the tracked-share
+  caveat** while this persists — someone reading the report later must
+  not mistake 0.84 for real performance.
+- **TCG wind-down is in progress** (Graham, 8 Aug — internal only, never
+  reference in any customer-facing copy). Expect product mix, PMAX feed
+  composition and traffic profile to shift over the coming weeks. Treat
+  drops in TCG-related campaign performance as expected, not as faults,
+  and flag if the PMAX feed needs restructuring as lines disappear.
 - **ALWAYS sanity-check Google-reported revenue against Shopify before
   concluding a campaign is underperforming.** Learned 8 Aug: two days of
   recommendations (a PMAX scale-up, then its withdrawal on
   "diminishing returns") were both built on tracked ROAS that was
-  silently collapsing. A £100/day campaign appearing to return 0.84 ROAS
-  while the shop takes £2,344 that day is a measurement bug, not a
-  performance one.
-- **Follow up UI warnings seen in screenshots.** The "Purchase — Needs
-  attention" flag was visible on 7 Aug and went unremarked for a day.
+  silently collapsing.
 
 - **Brand Search rebuild VERIFIED WORKING 5 Aug** — config confirmed in
   data (TARGET_SPEND, negatives present, CPC £0.19, spend £72 → £23 → ~£10,
@@ -175,13 +168,14 @@ Standing watch items for the daily run:
   when 4 Aug — the only day that actually spent the raised budget —
   matured at 2.06 ROAS). Before any scale recommendation, explicitly
   check the highest-spend days since the previous change.
-- **PMAX budget — DECISION SUSPENDED 8 Aug, no date.** Hold £94.80/day.
-  The 6 Aug scale-up recommendation and its 7 Aug withdrawal were both
-  built on ROAS from 4-7 Aug, which the tracking incident has since
-  invalidated — 4 and 5 Aug were the first badly under-tracked days, so
-  their poor ROAS proves nothing about the budget. Do not re-open this
-  until tracked share is back to ~30-40% for at least 3 consecutive days,
-  then reassess from clean matured data.
+- **PMAX budget — HOLD at £94.80/day, decision suspended 8 Aug.** The
+  6 Aug scale-up recommendation and its 7 Aug withdrawal were both built
+  on ROAS from 4-7 Aug, which the under-tracking invalidated — 4 and 5
+  Aug were the first badly under-tracked days, so their poor ROAS proves
+  nothing about the budget. Re-open only when tracked share recovers to
+  ~30-40% for 3 consecutive days. Holding is the right call meanwhile:
+  spend is steady at ~£85-110/day, the shop is trading normally, and
+  neither raising nor cutting can be justified from the data.
 - **Brand Search PHRASE match — recommended 6 Aug, softened 7 Aug.**
   Generic drift was 62% of spend on 5 Aug but only 24% on 6 Aug, so broad
   match appears to be settling; spend is £17.90 against a £20 budget.
