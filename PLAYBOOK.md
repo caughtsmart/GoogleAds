@@ -51,6 +51,31 @@ so Graham can say "do rec 2" in any session.
 
 Standing watch items for the daily run:
 
+- **🚨 OPEN INCIDENT (from 8 Aug): purchase conversion tracking broken.**
+  Google-tracked purchase revenue fell from ~40% of Shopify sales (2-3
+  Aug) to 2-6% (5-7 Aug) while the shop traded normally and ad clicks
+  held steady. Suspected cause: the "Google Shopping App Purchase" action
+  (the account's only primary purchase conversion, fed by the Shopify
+  Google & YouTube app) has stopped recording. The Ads UI shows the
+  **Purchase goal as "Needs attention"**. Until resolved:
+  - **Make NO budget or bidding recommendations based on ROAS.** State
+    plainly in each report that ROAS is unreliable.
+  - Each morning, re-run the cross-check: Google Ads `all_conversions`
+    for "Google Shopping App Purchase" by day vs Shopify
+    `FROM sales SHOW orders, total_sales TIMESERIES day`. Report the
+    tracked-share %. Recovery = tracked share back to ~30-40%.
+  - Watch for retrospective backfill — if the tag is fixed, historic days
+    may repopulate, so re-check 4-7 Aug before writing them off.
+- **ALWAYS sanity-check Google-reported revenue against Shopify before
+  concluding a campaign is underperforming.** Learned 8 Aug: two days of
+  recommendations (a PMAX scale-up, then its withdrawal on
+  "diminishing returns") were both built on tracked ROAS that was
+  silently collapsing. A £100/day campaign appearing to return 0.84 ROAS
+  while the shop takes £2,344 that day is a measurement bug, not a
+  performance one.
+- **Follow up UI warnings seen in screenshots.** The "Purchase — Needs
+  attention" flag was visible on 7 Aug and went unremarked for a day.
+
 - **Brand Search rebuild VERIFIED WORKING 5 Aug** — config confirmed in
   data (TARGET_SPEND, negatives present, CPC £0.19, spend £72 → £23 → ~£10,
   clean brand search terms). Routine monitoring now, not active watch:
@@ -103,14 +128,14 @@ Standing watch items for the daily run:
     only, and "YouTube channel subscriptions" (YouTube hosted) set to
     **Primary**. This is the ideal configuration — Demand Gen gets its
     bidding signal back and PMAX/Search/EUGY are untouched.
-  - **VERIFY from 8 Aug:** YouTube channel subscriptions should reappear
-    in `all_conversions` (expect double/triple digits per day; was 141-201
-    before it broke) and CPM should fall from ~£8 toward ~£2.50-3.50.
-    Allow a 3-5 day re-learning period after the goal change — do not
-    judge or recommend changes to this campaign before ~11 Aug. If
-    subscriptions have NOT resumed by 10 Aug, the cause is not the
-    conversion goal: investigate whether YouTube video assets are
-    serving/approved (delivery may have shifted to Discover/Gmail).
+  - **VERIFIED WORKING 8 Aug.** 7 Aug produced 40 YouTube subscriptions
+    (first since 2 Aug) with impressions up 3× to 4,335. Still below the
+    141-201/day norm; bid strategy is re-learning. Do not recommend
+    changes to this campaign before ~11 Aug. Track subs/day and CPM
+    (target ~£2.50-3.50; was £6.91 on 7 Aug). Spend hit £29.94 vs the £20
+    budget — normal post-change, but flag if it persists past 11 Aug.
+    Ignore CPC for this campaign: it optimises for subscriptions, so CPC
+    rising (£0.20 → £0.64) is expected, not a problem.
   - **Reading trap (cost a day, 7 Aug):** the "All your goals" summary row
     shows a COUNT of primary actions per goal, not which ones. Engagement
     showed "1 primary" — that was "Local actions - Other engagements",
@@ -133,13 +158,13 @@ Standing watch items for the daily run:
   when 4 Aug — the only day that actually spent the raised budget —
   matured at 2.06 ROAS). Before any scale recommendation, explicitly
   check the highest-spend days since the previous change.
-- **PMAX scale-up WITHDRAWN 7 Aug — decision deferred to Mon 10 Aug.**
-  The 6 Aug +20% recommendation was retracted when 4 Aug matured at 2.06
-  ROAS on £111.95 spend (the only day that truly spent the raised budget;
-  every other post-increase day landed at £84-91). Hold £94.80/day. On
-  10 Aug, assess 5/6/7 Aug once matured: if those three average > 4.5
-  ROAS, the scale-up case is real; if they mirror 4 Aug, recommend
-  reverting to £79/day. Do not re-recommend an increase before then.
+- **PMAX budget — DECISION SUSPENDED 8 Aug, no date.** Hold £94.80/day.
+  The 6 Aug scale-up recommendation and its 7 Aug withdrawal were both
+  built on ROAS from 4-7 Aug, which the tracking incident has since
+  invalidated — 4 and 5 Aug were the first badly under-tracked days, so
+  their poor ROAS proves nothing about the budget. Do not re-open this
+  until tracked share is back to ~30-40% for at least 3 consecutive days,
+  then reassess from clean matured data.
 - **Brand Search PHRASE match — recommended 6 Aug, softened 7 Aug.**
   Generic drift was 62% of spend on 5 Aug but only 24% on 6 Aug, so broad
   match appears to be settling; spend is £17.90 against a £20 budget.
