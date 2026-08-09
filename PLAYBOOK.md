@@ -146,6 +146,9 @@ Standing watch items for the daily run:
     budget — normal post-change, but flag if it persists past 11 Aug.
     Ignore CPC for this campaign: it optimises for subscriptions, so CPC
     rising (£0.20 → £0.64) is expected, not a problem.
+  - **Recovery on track 9 Aug:** subs 40 → 46, CPM £6.91 → £4.49, spend
+    back inside the £20 budget. Continue tracking subs/day and CPM until
+    CPM reaches ~£2.50-3.50, then close this watch item entirely.
   - **Reading trap (cost a day, 7 Aug):** the "All your goals" summary row
     shows a COUNT of primary actions per goal, not which ones. Engagement
     showed "1 primary" — that was "Local actions - Other engagements",
