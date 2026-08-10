@@ -146,9 +146,12 @@ Standing watch items for the daily run:
     budget — normal post-change, but flag if it persists past 11 Aug.
     Ignore CPC for this campaign: it optimises for subscriptions, so CPC
     rising (£0.20 → £0.64) is expected, not a problem.
-  - **Recovery on track 9 Aug:** subs 40 → 46, CPM £6.91 → £4.49, spend
-    back inside the £20 budget. Continue tracking subs/day and CPM until
-    CPM reaches ~£2.50-3.50, then close this watch item entirely.
+  - **WATCH ITEM CLOSED 10 Aug — fully recovered.** Subs 0 → 40 → 46 →
+    120; CPM £8.41 → £6.91 → £4.49 → £2.71 (inside the £2.50-3.50
+    baseline); impressions back to 8,236/day. Re-learning took three days
+    from Graham's 7 Aug campaign-specific goal fix. Routine monitoring
+    only: flag if spend exceeds £20/day sustained or CPM returns above
+    ~£5.
   - **Reading trap (cost a day, 7 Aug):** the "All your goals" summary row
     shows a COUNT of primary actions per goal, not which ones. Engagement
     showed "1 primary" — that was "Local actions - Other engagements",
@@ -179,12 +182,18 @@ Standing watch items for the daily run:
   ~30-40% for 3 consecutive days. Holding is the right call meanwhile:
   spend is steady at ~£85-110/day, the shop is trading normally, and
   neither raising nor cutting can be justified from the data.
-- **Brand Search PHRASE match — recommended 6 Aug, softened 7 Aug.**
-  Generic drift was 62% of spend on 5 Aug but only 24% on 6 Aug, so broad
-  match appears to be settling; spend is £17.90 against a £20 budget.
-  Still a valid tightening (saves ~£4-5/day) but no longer urgent — offer
-  it as a judgement call, don't push. Track the generic-share % daily; if
-  it exceeds 50% for two consecutive days, escalate the recommendation.
+- **Brand Search PHRASE match — ESCALATED 10 Aug, awaiting Graham.** The
+  trigger (generic share >50% for two consecutive days) was met: 58% on
+  8 Aug, 65% on 9 Aug, with spend breaking the £20 budget at £26.85
+  (134%) after rising three days straight. Only 50 of 117 clicks were
+  brand queries; no generic term converted on either day. Recommended:
+  change the "Loaded Dice" keyword from BROAD to PHRASE — keeps all brand
+  queries, kills the generic dice/D&D/40k category in one change.
+  Expected to return spend to ~£7-10/day. To apply: remove the broad
+  keyword (remove_keywords, needs ad_group_id + keyword_criterion_id) and
+  push_keywords with match_type PHRASE. Keep raising this daily while
+  spend exceeds budget; if Graham declines, fall back to category
+  negatives ("dice", "dnd", "kill team", "blood bowl").
 - **EUGY watch CLOSED 6 Aug** — the £0.76 CPC spike was a one-day blip on
   16 clicks; CPC back to £0.44, matured ROAS 2.85. Routine monitoring.
 
