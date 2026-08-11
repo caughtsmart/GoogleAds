@@ -72,6 +72,9 @@ Standing watch items for the daily run:
   Report the **tracked share %** each day as one context line. If it
   returns to ~30-40% for 3 consecutive days, say so and re-open the
   frozen budget decisions.
+  **Recovering as of 11 Aug:** 6% (5 Aug) → 12% → 19% → 27% (9 Aug) →
+  24% (10 Aug, immature). Earlier days also mature upward, so re-check
+  aged days each morning before judging the trend.
 - **Never present an absolute ROAS figure without the tracked-share
   caveat** while this persists — someone reading the report later must
   not mistake 0.84 for real performance.
@@ -182,18 +185,21 @@ Standing watch items for the daily run:
   ~30-40% for 3 consecutive days. Holding is the right call meanwhile:
   spend is steady at ~£85-110/day, the shop is trading normally, and
   neither raising nor cutting can be justified from the data.
-- **Brand Search PHRASE match — ESCALATED 10 Aug, awaiting Graham.** The
-  trigger (generic share >50% for two consecutive days) was met: 58% on
-  8 Aug, 65% on 9 Aug, with spend breaking the £20 budget at £26.85
-  (134%) after rising three days straight. Only 50 of 117 clicks were
-  brand queries; no generic term converted on either day. Recommended:
-  change the "Loaded Dice" keyword from BROAD to PHRASE — keeps all brand
-  queries, kills the generic dice/D&D/40k category in one change.
-  Expected to return spend to ~£7-10/day. To apply: remove the broad
-  keyword (remove_keywords, needs ad_group_id + keyword_criterion_id) and
-  push_keywords with match_type PHRASE. Keep raising this daily while
-  spend exceeds budget; if Graham declines, fall back to category
-  negatives ("dice", "dnd", "kill team", "blood bowl").
+- **Brand Search PHRASE match — STANDING SUGGESTION, do NOT re-raise
+  daily.** Structural fix: change the "Loaded Dice" keyword from BROAD to
+  PHRASE (keeps all brand queries, removes the generic dice/D&D/40k
+  category). Worth roughly £8/day — the generic share has run 62%, 24%,
+  58%, 65%, 34% across measured days, averaging about half of spend on
+  terms that have never once converted. It is a tidy-up, not a fire.
+  **Mention only when Graham asks, or if spend exceeds the £20 budget for
+  three consecutive days.** To apply: remove_keywords (needs ad_group_id
+  + keyword_criterion_id) then push_keywords with match_type PHRASE.
+  - *Process note (learned 11 Aug):* this recommendation was raised,
+    softened, escalated and de-escalated across five days by reacting to
+    single-day swings — 9 Aug's 65% was an outlier, and 10 Aug reverted
+    to 34% with spend back inside budget. Judge recurring structural
+    issues on multi-day averages and state a stable position; do not let
+    daily noise drive the recommendation up and down.
 - **EUGY watch CLOSED 6 Aug** — the £0.76 CPC spike was a one-day blip on
   16 clicks; CPC back to £0.44, matured ROAS 2.85. Routine monitoring.
 
