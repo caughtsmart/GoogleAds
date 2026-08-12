@@ -72,9 +72,13 @@ Standing watch items for the daily run:
   Report the **tracked share %** each day as one context line. If it
   returns to ~30-40% for 3 consecutive days, say so and re-open the
   frozen budget decisions.
-  **Recovering as of 11 Aug:** 6% (5 Aug) → 12% → 19% → 27% (9 Aug) →
-  24% (10 Aug, immature). Earlier days also mature upward, so re-check
-  aged days each morning before judging the trend.
+  **Recovering as of 12 Aug:** 6% (5 Aug) → 12% → 19% (8 Aug) → **33%
+  (9 Aug, matured)** → 24% (10 Aug, d+2) → 24% (11 Aug, d+1). Days mature
+  upward for ~3 days, so re-check aged days each morning before judging.
+  9 Aug is the first matured day back in the 30-40% band; two more
+  needed. Do NOT re-open budget decisions early — the whole point of the
+  three-day rule is that earlier recommendations were wrecked by acting
+  on unmatured, under-tracked data.
 - **Never present an absolute ROAS figure without the tracked-share
   caveat** while this persists — someone reading the report later must
   not mistake 0.84 for real performance.
