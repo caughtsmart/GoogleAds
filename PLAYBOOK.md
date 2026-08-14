@@ -9,8 +9,12 @@ morning, writes a dated report to `reports/`, and surfaces recommendations.
 - **Account:** Google Ads via the Windsor.ai connector (`google_ads`).
 - **Live campaigns only:** `campaign_status = ENABLED`.
 - **EXCLUDE all Glopal campaigns** — any campaign whose name contains
-  `Glopal` (the DE/NL/FR PMax + Brand campaigns managed by Glopal). Report
-  their total spend as a single FYI line, nothing more.
+  `Glopal` (the DE/NL/FR PMax, Brand and Shopping campaigns managed by
+  Glopal). Report their total spend as a single FYI line, nothing more.
+  Exception: DO flag structural changes on their side (campaigns
+  launched, paused or removed), since those move total account spend and
+  Graham may not be told. Glopal paused all three PMax campaigns on
+  13/14 Aug; their Brand and Shopping campaigns remain live.
 
 ## Data pulls (Windsor.ai `get_data`, connector `google_ads`)
 
@@ -72,13 +76,17 @@ Standing watch items for the daily run:
   Report the **tracked share %** each day as one context line. If it
   returns to ~30-40% for 3 consecutive days, say so and re-open the
   frozen budget decisions.
-  **Recovering as of 13 Aug — TWO of three matured days in band:**
-  6% (5 Aug) → 12% → 19% (8 Aug) → **33% (9 Aug)** → **37% (10 Aug)** →
-  25% (11 Aug, d+2) → 10% (12 Aug, d+1). Days mature upward for ~3 days,
-  so re-check aged days each morning before judging. If 11 Aug matures
-  into the 30-40% band, the three-day rule is met and the PMAX budget
-  decision re-opens. Do NOT re-open early — earlier recommendations were
-  wrecked by acting on unmatured, under-tracked data.
+  **As of 14 Aug — substantially recovered, strict test not yet met:**
+  6% (5 Aug) → 12% → 19% (8 Aug) → **33% (9 Aug)** → **39% (10 Aug)** →
+  **27% (11 Aug)** → 13% (12 Aug, d+2) → 12% (13 Aug, d+1). Days mature
+  upward for ~3 days; re-check aged days each morning. 11 Aug matured to
+  27%, marginally under the 30% threshold, so the three-consecutive-day
+  test fails. Hold; re-check as 12/13 Aug mature.
+  **When the test IS met, apply this caveat:** the pre-incident baseline
+  was ~40% and recovery is averaging ~33%, so tracked ROAS reads roughly
+  15-20% below pre-4-August levels. Discount accordingly before comparing
+  any campaign to its pre-incident figures, or it will look worse than it
+  is — including in the PMAX budget decision.
 - **Never present an absolute ROAS figure without the tracked-share
   caveat** while this persists — someone reading the report later must
   not mistake 0.84 for real performance.
