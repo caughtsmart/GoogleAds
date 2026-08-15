@@ -76,12 +76,18 @@ Standing watch items for the daily run:
   Report the **tracked share %** each day as one context line. If it
   returns to ~30-40% for 3 consecutive days, say so and re-open the
   frozen budget decisions.
-  **As of 14 Aug — substantially recovered, strict test not yet met:**
-  6% (5 Aug) → 12% → 19% (8 Aug) → **33% (9 Aug)** → **39% (10 Aug)** →
-  **27% (11 Aug)** → 13% (12 Aug, d+2) → 12% (13 Aug, d+1). Days mature
-  upward for ~3 days; re-check aged days each morning. 11 Aug matured to
-  27%, marginally under the 30% threshold, so the three-consecutive-day
-  test fails. Hold; re-check as 12/13 Aug mature.
+  **As of 15 Aug — recovery peaked then fell back; test NOT met:**
+  matured sequence 19% (8 Aug) → **33%** → **39%** → 27% → **13%**
+  (12 Aug). Days mature upward for ~3 days; re-check aged days each
+  morning. **Do NOT forecast when the test will clear** — it was called
+  "one day away" on both 13 and 14 Aug and was wrong both times. Just
+  report the number; re-open budget decisions only once three
+  consecutive matured days genuinely land in the 30-40% band.
+  **When reading the share, account for the denominator:** an unusually
+  large sales day driven by another channel (email, promo, release)
+  depresses tracked share arithmetically with no change in tracking.
+  Check whether Google's tracked *absolute* value held steady before
+  treating a low share as a tracking regression.
   **When the test IS met, apply this caveat:** the pre-incident baseline
   was ~40% and recovery is averaging ~33%, so tracked ROAS reads roughly
   15-20% below pre-4-August levels. Discount accordingly before comparing
