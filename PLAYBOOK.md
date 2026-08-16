@@ -115,6 +115,23 @@ Standing watch items for the daily run:
   "diminishing returns") were both built on tracked ROAS that was
   silently collapsing.
 
+- **"Download" in a Loaded Dice listing — INVESTIGATED AND CLOSED
+  15 Aug. Not an ads issue; do not re-investigate from the ad account.**
+  Graham flagged a listing reading "Download Warhammer 40k 11th Edition
+  Starter Sets" on `us.loadeddice.uk`. It is an ORGANIC result, and the
+  word is introduced by Glopal's US mirror. Verified: all 344 text assets
+  in the account (advertiser + auto-created) contain no "download"; no
+  asset targets `us.loadeddice.uk`; there is no US campaign in the
+  account. The Shopify source is clean — title tag, meta description and
+  article body all free of the word. Open question left with Graham:
+  whether Glopal rewrites the tag or Google rewrites Glopal's SERP entry
+  (outbound access to the domain is blocked from the analysis
+  environment). Full write-up in `reports/2026-08-15.md`.
+  - **General lesson: a "Loaded Dice" listing is not automatically our
+    ad.** Three surfaces can show our brand and we control only one:
+    our ad account, our organic pages, and the Glopal mirrors
+    (`us.`/DE/NL/FR), which Glopal rewrites. Check the `Sponsored` label
+    and the hostname before treating a screenshot as ad copy.
 - **Brand Search rebuild VERIFIED WORKING 5 Aug** — config confirmed in
   data (TARGET_SPEND, negatives present, CPC £0.19, spend £72 → £23 → ~£10,
   clean brand search terms). Routine monitoring now, not active watch:
