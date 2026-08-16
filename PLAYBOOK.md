@@ -65,24 +65,32 @@ Standing watch items for the daily run:
 - **DECISION BASIS while tracked ROAS is unreliable.** Absolute ROAS is
   meaningless right now — the shop is trading normally (42-75 orders/day)
   so the shortfall is measurement, not performance. Use instead:
-  1. **Shopify total sales** (`FROM sales SHOW orders, total_sales
+  1. **Ad cost as % of total store revenue — the primary metric.** Total
+     non-Glopal ad spend ÷ Shopify total revenue, weekly. Needs no
+     attribution at all: Shopify's revenue against the card statement.
+     Baseline: 7.51% (2-8 Aug) improving to 5.27% (9-15 Aug). Report it
+     weekly with the week-on-week move. Flag if it rises above ~8%.
+     Limitation: it measures the whole business, not incremental ad
+     contribution, so it cannot settle individual budget questions.
+  2. **Shopify total sales** (`FROM sales SHOW orders, total_sales
      TIMESERIES day`) as the truth source for whether trading is healthy.
-  2. **Relative comparison between campaigns** — under-tracking hits all
+  3. **Relative comparison between campaigns** — under-tracking hits all
      campaigns roughly equally, so campaign-vs-campaign ROAS ranking and
      week-on-week direction remain valid even though the absolute level
      does not.
-  3. **Non-revenue campaign health**: spend vs budget, CPC, impression
+  4. **Non-revenue campaign health**: spend vs budget, CPC, impression
      share, search-term quality, click volume.
   Report the **tracked share %** each day as one context line. If it
   returns to ~30-40% for 3 consecutive days, say so and re-open the
   frozen budget decisions.
-  **As of 15 Aug — recovery peaked then fell back; test NOT met:**
-  matured sequence 19% (8 Aug) → **33%** → **39%** → 27% → **13%**
-  (12 Aug). Days mature upward for ~3 days; re-check aged days each
-  morning. **Do NOT forecast when the test will clear** — it was called
-  "one day away" on both 13 and 14 Aug and was wrong both times. Just
-  report the number; re-open budget decisions only once three
-  consecutive matured days genuinely land in the 30-40% band.
+  **As of 16 Aug — settled BELOW the band; treat as the new normal.**
+  Matured sequence: 19% (8 Aug) → 33% → 39% → 27% → 15% → 18% (13 Aug).
+  The 9-10 Aug peak was the exception; coverage has settled at ~15-18%
+  against a ~40% baseline. **Do NOT forecast recovery** (called "one day
+  away" on both 13 and 14 Aug, wrong both times) and do not keep the
+  budget decision frozen pending a recovery that may not come. Report the
+  number in one line; re-open budget decisions only if three consecutive
+  matured days genuinely reach 30-40%.
   **When reading the share, account for the denominator:** an unusually
   large sales day driven by another channel (email, promo, release)
   depresses tracked share arithmetically with no change in tracking.
