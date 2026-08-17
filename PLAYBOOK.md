@@ -68,8 +68,9 @@ Standing watch items for the daily run:
   1. **Ad cost as % of total store revenue — the primary metric.** Total
      non-Glopal ad spend ÷ Shopify total revenue, weekly. Needs no
      attribution at all: Shopify's revenue against the card statement.
-     Baseline: 7.51% (2-8 Aug) improving to 5.27% (9-15 Aug). Report it
-     weekly with the week-on-week move. Flag if it rises above ~8%.
+     Baseline: 7.51% (2-8 Aug) → 5.27% (9-15 Aug) → 5.28% (10-16 Aug),
+     i.e. holding at the improved level. Report it weekly with the
+     week-on-week move. Flag if it rises above ~8%.
      Limitation: it measures the whole business, not incremental ad
      contribution, so it cannot settle individual budget questions.
   2. **Shopify total sales** (`FROM sales SHOW orders, total_sales
@@ -80,6 +81,12 @@ Standing watch items for the daily run:
      does not.
   4. **Non-revenue campaign health**: spend vs budget, CPC, impression
      share, search-term quality, click volume.
+  5. **Average order value** (Shopify orders vs revenue). Watch for
+     sustained shifts: AOV sets what a click is worth, so a lasting drop
+     changes the acceptable cost per acquisition. Normal range ~£40-50;
+     16 Aug came in at £23.52 on normal order volume — flagged to Graham,
+     cause unknown from this side. If AOV stays below ~£30 for a week,
+     revisit whether current CPCs and budgets still make sense.
   Report the **tracked share %** each day as one context line. If it
   returns to ~30-40% for 3 consecutive days, say so and re-open the
   frozen budget decisions.
