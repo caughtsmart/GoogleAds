@@ -68,8 +68,8 @@ Standing watch items for the daily run:
   1. **Ad cost as % of total store revenue — the primary metric.** Total
      non-Glopal ad spend ÷ Shopify total revenue, weekly. Needs no
      attribution at all: Shopify's revenue against the card statement.
-     Baseline: 7.51% (2-8 Aug) → 5.27% (9-15 Aug) → 5.28% (10-16 Aug),
-     i.e. holding at the improved level. Report it weekly with the
+     Baseline: 7.51% (2-8 Aug) → 5.27% → 5.28% → 5.39% (11-17 Aug),
+     i.e. holding at the improved level for three weeks. Report it weekly with the
      week-on-week move. Flag if it rises above ~8%.
      Limitation: it measures the whole business, not incremental ad
      contribution, so it cannot settle individual budget questions.
@@ -84,20 +84,24 @@ Standing watch items for the daily run:
   5. **Average order value** (Shopify orders vs revenue). Watch for
      sustained shifts: AOV sets what a click is worth, so a lasting drop
      changes the acceptable cost per acquisition. Normal range ~£40-50;
-     16 Aug came in at £23.52 on normal order volume — flagged to Graham,
-     cause unknown from this side. If AOV stays below ~£30 for a week,
-     revisit whether current CPCs and budgets still make sense.
+     16-17 Aug came in at £23.38 and £25.78 on normal order volume —
+     flagged to Graham, cause unknown from this side. Day 2 of 7. If AOV
+     stays below ~£30 for a week, revisit whether current CPCs and
+     budgets still make sense.
   Report the **tracked share %** each day as one context line. If it
   returns to ~30-40% for 3 consecutive days, say so and re-open the
   frozen budget decisions.
-  **As of 16 Aug — settled BELOW the band; treat as the new normal.**
-  Matured sequence: 19% (8 Aug) → 33% → 39% → 27% → 15% → 18% (13 Aug).
-  The 9-10 Aug peak was the exception; coverage has settled at ~15-18%
-  against a ~40% baseline. **Do NOT forecast recovery** (called "one day
-  away" on both 13 and 14 Aug, wrong both times) and do not keep the
-  budget decision frozen pending a recovery that may not come. Report the
-  number in one line; re-open budget decisions only if three consecutive
-  matured days genuinely reach 30-40%.
+  **As of 18 Aug — SHARE IS THE WRONG METRIC; track absolute value too.**
+  The 16 Aug conclusion that coverage had "settled at 15-18%" was too
+  pessimistic: tracked share has a moving denominator, and store revenue
+  grew 56%, so a falling share did not mean falling attribution. Google's
+  absolute attributed revenue: £670/day pre-incident (2-3 Aug) → £137-330
+  at the trough (5-12 Aug) → **£558/day now (14-17 Aug)**, i.e. only ~17%
+  below baseline. On the two days whose revenue matched the pre-incident
+  baseline (16-17 Aug, ~£1,433) the share was 39% and 32% — back in band.
+  **Report BOTH the share and the absolute tracked £/day**, and never
+  conclude a trend from the share alone. Still do NOT forecast when the
+  three-matured-day test will clear (called early on 13 and 14 Aug).
   **When reading the share, account for the denominator:** an unusually
   large sales day driven by another channel (email, promo, release)
   depresses tracked share arithmetically with no change in tracking.
