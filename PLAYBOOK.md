@@ -68,8 +68,8 @@ Standing watch items for the daily run:
   1. **Ad cost as % of total store revenue — the primary metric.** Total
      non-Glopal ad spend ÷ Shopify total revenue, weekly. Needs no
      attribution at all: Shopify's revenue against the card statement.
-     Baseline: 7.51% (2-8 Aug) → 5.27% → 5.28% → 5.39% (11-17 Aug),
-     i.e. holding at the improved level for three weeks. Report it weekly with the
+     Baseline: 7.51% (2-8 Aug) → 5.27% → 5.28% → 5.39% → 5.58%
+     (12-18 Aug), i.e. holding around 5.3-5.6%. Report it weekly with the
      week-on-week move. Flag if it rises above ~8%.
      Limitation: it measures the whole business, not incremental ad
      contribution, so it cannot settle individual budget questions.
@@ -84,10 +84,17 @@ Standing watch items for the daily run:
   5. **Average order value** (Shopify orders vs revenue). Watch for
      sustained shifts: AOV sets what a click is worth, so a lasting drop
      changes the acceptable cost per acquisition. Normal range ~£40-50;
-     16-17 Aug came in at £23.38 and £25.78 on normal order volume —
-     flagged to Graham, cause unknown from this side. Day 2 of 7. If AOV
-     stays below ~£30 for a week, revisit whether current CPCs and
-     budgets still make sense.
+     **CAUSE IDENTIFIED 19 Aug: product mix, not discounting.** AOV
+     ran £23.38 / £25.78 / £22.93 on 16-18 Aug at normal order volume.
+     Top sellers are single booster packs and small collectibles (£5-20)
+     rather than boxes or army sets — consistent with the TCG wind-down
+     removing high-value sealed lines. Day 3 of a 7-day watch. If it
+     holds below ~£30 through the watch, produce a considered
+     recommendation covering the Brand Search £0.30 CPC ceiling and the
+     PMAX budget against the new basket economics — a click is worth
+     roughly half what it was. Do NOT react mid-transition: PMAX's CPC
+     has already fallen to £0.27 and Brand Search runs at £0.15, so the
+     account is self-correcting for now.
   Report the **tracked share %** each day as one context line. If it
   returns to ~30-40% for 3 consecutive days, say so and re-open the
   frozen budget decisions.
