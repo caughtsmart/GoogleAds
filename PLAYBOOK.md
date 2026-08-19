@@ -65,60 +65,51 @@ Standing watch items for the daily run:
 - **DECISION BASIS while tracked ROAS is unreliable.** Absolute ROAS is
   meaningless right now — the shop is trading normally (42-75 orders/day)
   so the shortfall is measurement, not performance. Use instead:
-  1. **Ad cost as % of total store revenue — the primary metric.** Total
-     non-Glopal ad spend ÷ Shopify total revenue, weekly. Needs no
-     attribution at all: Shopify's revenue against the card statement.
-     Baseline: 7.51% (2-8 Aug) → 5.27% → 5.28% → 5.39% → 5.58%
-     (12-18 Aug), i.e. holding around 5.3-5.6%. Report it weekly with the
-     week-on-week move. Flag if it rises above ~8%.
-     Limitation: it measures the whole business, not incremental ad
-     contribution, so it cannot settle individual budget questions.
-  2. **Shopify total sales** (`FROM sales SHOW orders, total_sales
-     TIMESERIES day`) as the truth source for whether trading is healthy.
+  0. **🔴 ALWAYS filter Shopify to the Online Store channel.** Every
+     ShopifyQL query MUST carry `WHERE sales_channel = 'Online Store'`.
+     Graham caught on 19 Aug that unfiltered totals include the physical
+     shop, eBay and other channels — Online Store is only ~59% of
+     revenue (POS 26%, eBay 11%). Google Ads drives the online store
+     only, so an unfiltered denominator understates tracked share and ad
+     cost of sale by roughly 40%, and contaminates AOV with counter
+     trade. Three separate conclusions were wrong before this was fixed.
+  1. **Ad cost as % of ONLINE STORE revenue — the primary metric.** Total
+     non-Glopal ad spend ÷ Online Store revenue, weekly. Needs no
+     attribution: Shopify's revenue against the card statement.
+     Corrected baseline: **10.54% (5-11 Aug) → 9.95% (12-18 Aug)**.
+     (The earlier 5.27-5.58% series was computed on unfiltered revenue
+     and is void.) Report weekly with the week-on-week move. Flag if it
+     rises above ~14%.
+     Limitation: it measures the whole online business, not incremental
+     ad contribution, so it cannot settle individual budget questions.
+  2. **Online Store sales** (`FROM sales SHOW orders, total_sales
+     TIMESERIES day WHERE sales_channel = 'Online Store'`) as the truth
+     source for whether the online business is trading healthily.
   3. **Relative comparison between campaigns** — under-tracking hits all
      campaigns roughly equally, so campaign-vs-campaign ROAS ranking and
      week-on-week direction remain valid even though the absolute level
      does not.
   4. **Non-revenue campaign health**: spend vs budget, CPC, impression
      share, search-term quality, click volume.
-  5. **Average order value** (Shopify orders vs revenue). Watch for
-     sustained shifts: AOV sets what a click is worth, so a lasting drop
-     changes the acceptable cost per acquisition. Normal range ~£40-50;
-     **CAUSE IDENTIFIED 19 Aug: product mix, not discounting.** AOV
-     ran £23.38 / £25.78 / £22.93 on 16-18 Aug at normal order volume.
-     Top sellers are single booster packs and small collectibles (£5-20)
-     rather than boxes or army sets — consistent with the TCG wind-down
-     removing high-value sealed lines. Day 3 of a 7-day watch. If it
-     holds below ~£30 through the watch, produce a considered
-     recommendation covering the Brand Search £0.30 CPC ceiling and the
-     PMAX budget against the new basket economics — a click is worth
-     roughly half what it was. Do NOT react mid-transition: PMAX's CPC
-     has already fallen to £0.27 and Brand Search runs at £0.15, so the
-     account is self-correcting for now.
-  Report the **tracked share %** each day as one context line. If it
-  returns to ~30-40% for 3 consecutive days, say so and re-open the
-  frozen budget decisions.
-  **As of 18 Aug — SHARE IS THE WRONG METRIC; track absolute value too.**
-  The 16 Aug conclusion that coverage had "settled at 15-18%" was too
-  pessimistic: tracked share has a moving denominator, and store revenue
-  grew 56%, so a falling share did not mean falling attribution. Google's
-  absolute attributed revenue: £670/day pre-incident (2-3 Aug) → £137-330
-  at the trough (5-12 Aug) → **£558/day now (14-17 Aug)**, i.e. only ~17%
-  below baseline. On the two days whose revenue matched the pre-incident
-  baseline (16-17 Aug, ~£1,433) the share was 39% and 32% — back in band.
-  **Report BOTH the share and the absolute tracked £/day**, and never
-  conclude a trend from the share alone. Still do NOT forecast when the
-  three-matured-day test will clear (called early on 13 and 14 Aug).
-  **When reading the share, account for the denominator:** an unusually
-  large sales day driven by another channel (email, promo, release)
-  depresses tracked share arithmetically with no change in tracking.
-  Check whether Google's tracked *absolute* value held steady before
-  treating a low share as a tracking regression.
-  **When the test IS met, apply this caveat:** the pre-incident baseline
-  was ~40% and recovery is averaging ~33%, so tracked ROAS reads roughly
-  15-20% below pre-4-August levels. Discount accordingly before comparing
-  any campaign to its pre-incident figures, or it will look worse than it
-  is — including in the PMAX budget decision.
+  5. **Average order value — ONLINE ONLY.** AOV sets what a click is
+     worth, so a lasting drop changes the acceptable cost per
+     acquisition. Online AOV runs ~£21-65, averaging ~£45. **The 16-18
+     Aug "AOV collapse" was a channel artefact** — blended AOV showed
+     £23-26 but online-only was £34.96 / £31.36 / £21.85. Watch
+     withdrawn 19 Aug. Only act on a sustained online-only drop below
+     ~£30 across a full week.
+  Report the **tracked share %** each day as one context line, computed
+  against ONLINE STORE revenue. **RESOLVED 19 Aug: tracking has fully
+  recovered.** On the corrected denominator the real baseline was 50-65%
+  (not 40%), the trough was 12%, and 16-18 Aug ran 65% / 47% / 47% — at
+  or above baseline. The three-day test is met and the frozen budget
+  decisions are unfrozen. Keep reporting the number, but the incident is
+  closed; do not re-litigate it.
+  **Superseded note (18 Aug):** an earlier fix here observed that share
+  has a moving denominator and that absolute tracked £/day should be
+  reported alongside it. Still true and still worth doing — but the
+  larger cause was the unfiltered channel denominator, fixed 19 Aug.
+  **Keep reporting both the share and the absolute tracked £/day.**
 - **Never present an absolute ROAS figure without the tracked-share
   caveat** while this persists — someone reading the report later must
   not mistake 0.84 for real performance.
@@ -238,7 +229,13 @@ Standing watch items for the daily run:
   when 4 Aug — the only day that actually spent the raised budget —
   matured at 2.06 ROAS). Before any scale recommendation, explicitly
   check the highest-spend days since the previous change.
-- **PMAX budget — HOLD at £94.80/day, decision suspended 8 Aug.** The
+- **PMAX budget — RESOLVED 19 Aug: HOLD at £94.80/day.** On restored
+  tracking, matured ROAS 12-17 Aug was **4.14** (£566.32 → £2,344.49)
+  with 22.9% impression share. That clears the 2.0 floor and the 3.0
+  target but not the 5.0 scale-up bar, and it already spends its budget
+  almost exactly (£75-113/day). No further review unless matured ROAS
+  leaves the 3.0-5.0 range. Historical note follows:
+- **(superseded) PMAX budget — HOLD at £94.80/day, decision suspended 8 Aug.** The
   6 Aug scale-up recommendation and its 7 Aug withdrawal were both built
   on ROAS from 4-7 Aug, which the under-tracking invalidated — 4 and 5
   Aug were the first badly under-tracked days, so their poor ROAS proves
