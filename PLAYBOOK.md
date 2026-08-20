@@ -37,7 +37,21 @@ For each live, non-Glopal campaign:
 - **Spend spikes.** Yesterday's spend > 1.5× its 7-day average → flag.
 - **ROAS deterioration.** 7-day ROAS < 60% of 30-day ROAS → flag.
 - **Scale opportunities.** ROAS ≥ 5 and search impression share < 40% →
-  candidate for budget increase.
+  candidate for budget increase. **Always check the impression-share
+  SPLIT before recommending budget** (`search_budget_lost_impression_
+  share` vs `search_rank_lost_impression_share`): budget only helps when
+  impressions are lost to BUDGET. PMAX loses 69.8% to rank and 9.9% to
+  budget, so more budget buys it almost nothing; EUGY loses 25.3% to
+  budget, so it does. For small campaigns that are demonstrably
+  budget-capped and above the 3.0 target, a modest test increase is a
+  reasonable exception to the ROAS ≥ 5 bar — say so explicitly and let
+  Graham decide.
+- **Brand campaigns: judge coverage on EXACT-MATCH impression share.**
+  The headline `search_impression_share` for a broad-matched brand
+  keyword includes the whole generic category it deliberately avoids, so
+  it reads misleadingly low. Brand Search showed 22.9% headline but
+  **81% exact-match** — near saturation, nothing to recover. A false
+  alarm was raised on this on 19 Aug and closed on 20 Aug.
 - **Conversion hygiene.** Watch for campaigns whose "conversions" are
   £1-value micro-conversions. Never treat these as revenue; report such
   campaigns on engagement cost, not ROAS.
@@ -76,7 +90,8 @@ Standing watch items for the daily run:
   1. **Ad cost as % of ONLINE STORE revenue — the primary metric.** Total
      non-Glopal ad spend ÷ Online Store revenue, weekly. Needs no
      attribution: Shopify's revenue against the card statement.
-     Corrected baseline: **10.54% (5-11 Aug) → 9.95% (12-18 Aug)**.
+     Corrected baseline: **10.54% (5-11 Aug) → 9.95% → 10.44%
+     (13-19 Aug)**, i.e. steady around 10%.
      (The earlier 5.27-5.58% series was computed on unfiltered revenue
      and is void.) Report weekly with the week-on-week move. Flag if it
      rises above ~14%.
