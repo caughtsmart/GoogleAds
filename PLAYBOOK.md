@@ -69,6 +69,18 @@ so Graham can say "do rec 2" in any session.
 
 Standing watch items for the daily run:
 
+- **EUGY budget raised to £15.00/day by Graham, 21 Aug** (from £12.50;
+  confirmed in the API). Rationale: 7-day ROAS 5.66 with 21.5% of
+  impressions lost to the budget cap. **Review on 28 Aug** using matured
+  data for 22-27 Aug:
+  - Keep at £15 if 7-day ROAS holds **above 3.5**.
+  - Recommend reverting to £12.50 if it falls **below 3.0**.
+  - Also re-check `search_budget_lost_impression_share`: if it is now
+    near zero the cap is no longer binding and a further increase is not
+    warranted; if it is still 15%+ at good ROAS, a second step may be.
+  Until 28 Aug, report EUGY's spend and ROAS but do not recommend further
+  budget changes — let the test run.
+
 - **Under-tracking: KNOWN AND ACCEPTED (Graham's call, 8 Aug). Do not
   re-investigate; do not raise it as an alarm.** From 4 Aug, Google
   tracked only 2-13% of Shopify revenue (was ~40%), across BOTH purchase
